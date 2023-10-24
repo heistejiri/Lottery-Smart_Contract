@@ -21,10 +21,25 @@ contract Lottery {
         // note the msg.sender was made payable.
     }
 
-    function getBalance() public view (uint){ //to check the amount of ether that has been deposited
+    function getBalance() public view returns(uint){ //to check the amount of ether that has been deposited and return a random number
         require(manager==msg.sender, "You are not the manager"); //condition that states only manager can request for balance.
         return address(this).balance; //return the balance is condition is true.
     }
 
-    f
+    function random() internal view returns(uint){ //this fuction is used to select a random winner.
+        return uint(keccak256(abi.encodePacked(block.prevrandao,block.timestamp,players.length)));
+    } //the syntax above would generate a random player
+      //use should possible use oracle instead
+
+    function pickWinner() public { //this function is use to pick winner random
+        require(manager==msg.sender, "You're not the manager");
+        require(players.length>=3, "Players are less than 3");
+
+        uint r=random();
+        uint index = r%players.length;
+        winner=players[index];
+        winner.transfer(getBalance());
+        players= new address payable[](0);
+        
+    }
 }
