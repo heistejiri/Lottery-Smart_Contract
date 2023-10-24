@@ -111,11 +111,11 @@
 	},
 	"sources": {
 		"Lottery.sol": {
-			"keccak256": "0x92e23905f0d3e870698f3945d3242419bc74ec0f40fac96266f26f0a62fce9bf",
+			"keccak256": "0xfc92d6936aaed5611ad17287d5a804261ffedbe55324908e1febb0885884e1c5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e458ef97b0c8e69ab70f47f56243707e4e6aeaee116f77b90180e38cd4984876",
-				"dweb:/ipfs/QmPnJ9YfmrT1jJvpfCHxrrA2opB45gz8hnExKkzgQUZmGs"
+				"bzz-raw://54c58e7d22636aadb9f7419d4114c1f75413ca6ffab18829378a2785f4ca07b2",
+				"dweb:/ipfs/QmNT35BB5ChLwZye2roLHTNK52iiBe8Tw4AYouQpURw1Es"
 			]
 		}
 	},
